@@ -10,7 +10,7 @@ end
 
 module Delayed
   class PerformableMethod < Struct.new(:object, :method, :args)
-    STRING_FORMAT = /^LOAD\;([A-Z][\w\:]+)(?:\;(\w+))?$/
+    STRING_FORMAT = /^LOAD\;([A-Z][\w\:]+)(?:\;([[:print:]]+))?$/
     
     class LoadError < StandardError
     end
